@@ -228,18 +228,18 @@ let NAMES = [
   "DK - Morten",
   "DE - Changiz","DE - Peter","DK - Jesper","DK - Patrick","NL - Kemal","NL - Ozan","NL - Rick","NL - Sandro",
   "NL - Clint","SER - Zoran",
-  "DK - Lars","NL - Daniel","NL - Mandy","NL - Robert"
+  "DE - Kasper","DE - Michael","DK - Lars","NL - Daniel","NL - Mandy","NL - Mark","NL - Robert"
 ];
 let SECTIONS = [
   { label: "IT Management",                    start: 0,  count: 1  },
   { label: "IT Operations & Support",          start: 1,  count: 8  },
   { label: "IT Infrastructure & Security",     start: 9,  count: 2  },
-  { label: "IT Application Management & Data", start: 11, count: 4  }
+  { label: "IT Application Management & Data", start: 11, count: 7  }
 ];
 const CLS    = ["off","vac","wfh","pto"];
 const ICO    = ["","✈","⌂","½"];
 const LABELS = ["In office","Vacation","WFH","PTO/half"];
-let sz = 15, st = {};
+let sz = 18, st = {};
 
 function init(n) {
   for (let i = 0; i < n; i++) {
@@ -735,7 +735,6 @@ function applyTmpToGlobals(tmp) {
   SECTIONS.length = 0;
   newSections.forEach(s => SECTIONS.push(s));
   sz = NAMES.length;
-  document.getElementById("ts").value = sz;
   st = newSt;
 }
 
